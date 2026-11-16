@@ -5,8 +5,12 @@
   <title>Redirigiendo a garciamonterde.com...</title>
   <meta http-equiv="refresh" content="0; url=https://garciamonterde.com/">
   <link rel="canonical" href="https://garciamonterde.com/">
-  <script>window.location.replace("https://garciamonterde.com/" + window.location.pathname + window.location.search);</script>
+  <script>
+    const path = window.location.pathname.replace(/^\/GarciaMonterdeRedirect/, "") || "/";
+    window.location.replace("https://garciamonterde.com" + path + window.location.search + window.location.hash);
+  </script>
 </head>
 <body>
+  <p>Redirigiendo a <a href="https://garciamonterde.com/">garciamonterde.com</a>...</p>
 </body>
 </html>
